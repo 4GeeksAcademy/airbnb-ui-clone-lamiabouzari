@@ -20,7 +20,7 @@ const listings = [
     title: "Modern apartment with balcony",
     locationLabel: "Barcelona, Spain",
     imageUrl:
-      "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
     isGuestFavorite: true,
     isSuperhost: true,
     rating: 4.9,
