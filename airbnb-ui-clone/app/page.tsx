@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { AmenitiesGrid } from "@/components/home/amenities-grid";
 import { CategoryCard } from "@/components/home/category-card";
@@ -125,6 +126,7 @@ type HomeData = {
 };
 
 export default function HomePage() {
+  const router = useRouter();
   const [heroSearchLocation, setHeroSearchLocation] = useState("Barcelona");
   const [heroCheckIn, setHeroCheckIn] = useState("Jul 4");
   const [heroCheckOut, setHeroCheckOut] = useState("Jul 8");
@@ -167,6 +169,7 @@ export default function HomePage() {
     setHeroCheckOut((current) => current.trim() || "Add date");
     setHeroAdults((current) => (current < 1 ? 1 : current));
     setHeroChildren((current) => (current < 0 ? 0 : current));
+    router.push("/catalog");
   }
 
   function handleToggleFaqItem(id: string) {

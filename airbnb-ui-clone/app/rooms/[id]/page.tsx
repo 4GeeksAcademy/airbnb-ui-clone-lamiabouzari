@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -193,6 +194,16 @@ export default function RoomDetailPage() {
       searchSummary={{ destination: room?.location ?? "Room details", dates: "Add dates", guests: `${guestCount} guests` }}
     >
       <div className="mx-auto w-full max-w-6xl">
+        <div className="mb-5">
+          <Link
+            href="/catalog"
+            className="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 transition hover:bg-neutral-100"
+          >
+            <span aria-hidden="true">←</span>
+            Back to catalog
+          </Link>
+        </div>
+
         {isLoading ? (
           <section className="flex min-h-[60vh] items-center justify-center rounded-2xl border border-neutral-200 bg-white px-6 py-16 text-center">
             <div>
